@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .body-container {
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 88vh;
+        padding: 30px;
+      }
+      thead {
+        background-color: aquamarine;
+      }
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body class="body_login">
+    <div class="container">
+      <div class="image">
+        <img src="./logo.jpg" width="70px" height="70px" />
+      </div>
+      <div class="right-nav">
+        <ul>
+          <li>Home</li>
+          <li><a href="./aboutpage.html">About Library</a></li>
+          <li>Rules & Regulations</li>
+          <li>Price Card</li>
+          <li>
+            <a href="./signup.html" target="_self">SignUP</a>
+          </li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./search.html">Search</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="body-container">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 20px 0px;
+        "
+      >
+        <div>
+          <input id="search" type="search" />
+          <button id="searchButton">Search</button>
+        </div>
+        <div>
+          <input id="checkBox" type="checkbox" onclick="mytempFunction()" />
+          <label for="checkBox"> + Add Book</label>
+        </div>
+      </div>
+      <form id="addBookForm" class="hide">
+        <div>
+          <label for="title">Title</label><br />
+          <input id="title" type="text" style="width: 100%; height: 18px" />
+        </div>
+        <br />
+        <div>
+          <label for="price">Price</label><br />
+          <input id="price" type="number" style="width: 100%; height: 18px" />
+        </div>
+        <br />
+        <button type="submit">Add Book</button>
+      </form>
+
+      <div>
+        <table style="width: 100%">
+          <thead>
+            <tr>
+              <th>S.no</th>
+              <th>Title</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Include JavaScript file -->
+    <script src="books.js"></script>
+  </body>
+</html>
